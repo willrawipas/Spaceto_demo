@@ -37,10 +37,11 @@
     </div>
 
     <!-- List Card -->
-    <% if (workspace.length > 0) { %>
+    <% if (workspace.length > 0 ) { %>
         
     <div class="list-card-grid">
         <% workspace.forEach((workspaces, index) => { %> 
+            <% if (workspaces.location == "CB06") { %>
         <div class="custom-card">
             <img src="/assets/img/<%= workspaces.image %>" alt="Card image cap" />
             <div class="card-body">
@@ -60,6 +61,7 @@
                 <a href="#" class="btn-custom">ดูรายละเอียด</a>
             </div>
         </div>
+        <% }%>
         <% }) %>
     </div>
         
